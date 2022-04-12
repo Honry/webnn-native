@@ -1,0 +1,29 @@
+{
+  "name": "tfjs_benchmark",
+  "version": "0.0.1",
+  "description": "TensorFlow.js e2e benchmark",
+  "main": "main.js",
+  "author": "Intel",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "electron-forge start --",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "config": {
+    "forge": "./forge.config.js"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "18.0.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "bindings": "^1.5.0",
+    "chai": "^4.2.0"
+  }
+}
