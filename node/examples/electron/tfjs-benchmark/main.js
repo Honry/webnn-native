@@ -19,6 +19,7 @@ function createWindow() {
     }
   })
 
+  app.commandLine.appendSwitch('enable-unsafe-webgpu');
 
   let url = `file://${__dirname}/benchmarks/local-benchmark/index.html`;
 

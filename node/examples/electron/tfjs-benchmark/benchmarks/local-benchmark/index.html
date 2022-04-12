@@ -818,7 +818,6 @@ limitations under the License.
         'tfjs-core/dist/tf-core.js',
         'tfjs-backend-cpu/dist/tf-backend-cpu.js',
         'tfjs-backend-webgl/dist/tf-backend-webgl.js',
-        'tfjs-backend-webgpu/dist/tf-backend-webgpu.js',
         'tfjs-layers/dist/tf-layers.js',
         'tfjs-converter/dist/tf-converter.js',
         'tfjs-backend-wasm/dist/tf-backend-wasm.js',
@@ -830,6 +829,7 @@ limitations under the License.
       }
       processUrls(urls, localBuild);
       urls = urls.concat([
+        './local-builds/tf-backend-webgpu.js',
         'https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder',
         'https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands',
         'https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2',
@@ -838,7 +838,7 @@ limitations under the License.
         // Load tfjs-tflite from jsdelivr because it correctly sets the
         // "cross-origin-resource-policy" header.
         'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@latest/dist/tf-tflite.js',
-        './tflite-support/tflite_model_runner_cc_simd.js',
+        './local-builds/tflite-support/tflite_model_runner_cc_simd.js',
         '../model_config.js',
         '../benchmark_util.js',
         './util.js',
