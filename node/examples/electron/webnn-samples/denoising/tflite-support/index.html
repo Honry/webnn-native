@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>TFLite Web API (tflite-support) Model Runner Denosing Demo</title>
+
+<head>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500,700">
+  <style>
+    body {
+      font-family: 'Google Sans';
+      padding: 20px;
+    }
+
+    h1 {
+      color: #425066;
+      font-size: 31px;
+      margin-top: 0;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>TFLite Web API (tflite-support) Model Denosing Runner Demo</h1>
+  <div>
+    Threads Number: <input type="number" id="numThreads" value="1" min="1" defaultValue="1"/>
+  </div>
+  <div>Model:
+    <select id="model">
+      <option value="model">old model</option>
+      <option value="model_new">new model</option>
+    </select>
+  </div>
+  <div>
+    Use WebNN delegate: <input type="checkbox" id="webnnDelegate" />
+    Device preference:
+    <select id="webnnDevice">
+      <option value="0">default</option>
+      <option value="1">gpu</option>
+      <option value="2">cpu</option>
+    </select>
+  </div>
+  <input onclick="load()" id='loadModel' type="button" value="Load Model" />
+  <br/>
+  <!-- Loading status -->
+  <div class="loading-stats"></div>
+  <div id="predict" hidden>
+    <div class="content">
+      Run Number: <input type="number" id="numRuns" value="1" min="1" defaultValue="1"/>
+      <input onclick="start()" type="button" value="Predict" />
+    </div>
+    <div class="content">
+      <div class="result"></div>
+    </div>
+  </div>
+  <script src="./tflite_model_runner_cc_simd.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
+

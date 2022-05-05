@@ -18,9 +18,9 @@ function createWindow() {
       preload: path.join(__dirname, 'node_setup.js')
     }
   })
-
-
-  let url = `file://${__dirname}/webnn-samples/index.html`
+  mainWindow.webContents.openDevTools();
+  let url = `file://${__dirname}/denoising/tflite-support/index.html`
+  // let url = `file://${__dirname}/webnn-samples/index.html`
 
   const sampleNames = [
     "code",

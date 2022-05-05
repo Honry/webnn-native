@@ -28,7 +28,7 @@
         },
         'Release': {
           'msvs_settings': {
-            'VCCLCompilerTool': { 
+            'VCCLCompilerTool': {
               'ExceptionHandling': 1,
               'RuntimeTypeInfo': 'true',
               'RuntimeLibrary': 2, # MultiThreadedDLL (/MD),
@@ -75,7 +75,7 @@
               'files': [
                   '<(WEBNN_NATIVE_LIB_PATH)/libwebnn_native.so',
                   '<(WEBNN_NATIVE_LIB_PATH)/libwebnn_proc.so',
-                  '<(WEBNN_NATIVE_LIB_PATH)/libngraph_c_api.so',
+                  # '<(WEBNN_NATIVE_LIB_PATH)/libngraph_c_api.so',
               ]
             } ]
           }
